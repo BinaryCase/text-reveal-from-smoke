@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>text reveal from smoke</title>
+	<link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+			background: white;
+
+		}
+		
+		div.main{
+			height: 100vh;
+			background:  white;
+		
+
+		}
+		video{
+			position: absolute;
+			left: 30px;
+			object-fit: cover;
+		}
+		.main h1{
+			margin: 0;
+			padding: 0;
+			color: white;
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			transform: translate(0, -50%);
+			text-align: center;
+			font-size: 7em;
+			font-family: 'Staatliches', cursive;
+			letter-spacing: .1em;
+
+		}
+		.main h1 span{
+			display: inline-block;
+			animation: reveal 5s ease-out forwards;
+			pause: 10s;
+		}
+
+		@keyframes reveal
+		{
+			0%{
+				opacity: 0;
+				filter: blur(20px);
+				transform: rotateY(90deg);
+			}
+			60%{
+				opacity: 0;
+				filter: blur(20px);
+				transform: rotateY(220deg);
+			}
+			100%{
+				opacity: 1;
+				filter: blur(0px);
+				transform: rotateY(0deg);
+			}
+		}
+
+	.main h1 span:nth-child(1)
+	{color:#e6261f;}
+	.main h1 span:nth-child(2)
+	{color:#eb7532;}
+	.main h1 span:nth-child(3)
+	{color:#f7d038;}
+	.main h1 span:nth-child(4)
+	{color:#a3e048;}
+	.main h1 span:nth-child(5)
+	{color:#a3e048;}
+	.main h1 span:nth-child(6)
+	{color:#34bbe6;}
+	.main h1 span:nth-child(7)
+	{color:#4355db;}
+	.main h1 span:nth-child(8)
+	{color:#d23be7;}
+	.main h1 span:nth-child(9)
+	{color:#300bfc;}
+	.main h1 span:nth-child(10)
+	{color:seagreen;}
+		
+
+	</style>
+	}
+</head>
+<body>
+
+
+	<div class="main">
+			
+		<video src="video.mp4" autoplay muted loop></video>
+		<h1>
+			<span>B</span><span>I</span><span>N</span><span>A</span><span>R</span><span>Y</span>
+			
+			<span> </span>
+
+			<span>C</span><span>A</span><span>S</span><span>E</span>
+		</h1>
+		<div class="blur"></div>
+	</div>
+</body>
+</html>
